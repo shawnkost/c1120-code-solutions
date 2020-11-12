@@ -8,15 +8,15 @@
 }
 
 .column-half {
-  width: 100%;
+  width: 50%;
 }
 
 .column-one-third {
-  width: 100%;
+  width: 33.3%;
 }
 
 .column-one-forth {
-  width: 100%;
+  width: 25%;
 }
 
 .images {
