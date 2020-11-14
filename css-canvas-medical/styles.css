@@ -35,6 +35,7 @@
   width: 80%;
   margin: auto;
   position: relative;
+
 }
 
 .woman-photo {
@@ -47,19 +48,19 @@
   left: 10%;
   font-size: 48px;
   color: #FFFFFF;
-  font-family: 'Tiempos Headline';
+  font-family: 'Tiempos Headline', serif;
   font-weight: 500;
 }
 
-p {
+.image-text > p {
   position: absolute;
   text-align: left;
-  font-size: 26px;
+  font-size: 24px;
   bottom: 35%;
   left: 10%;
   width: 50%;
   color: #FFFFFF;
-  font-family: 'Avenir';
+  font-family: 'Avenir', sans-serif;
 }
 
 .get-started-button {
@@ -86,28 +87,96 @@ p {
 h3 {
   color:#6E6E6E;
   font-size: 48px;
-  font-family: 'Tiempos Headline';
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 300;
+  height: 40px;
 }
 
 .sub-title {
-  font-size: 26px;
-}
-
-.locations1 {
-  justify-content: center;
-  display: flex;
-  width: 50%;
-}
-
-.locations2 {
-  width: 50%;
-}
-
-.locations3 {
-  width: 50%;
+  font-size: 24px;
+  font-family: 'Avenir', sans-serif;
+  color:#6E6E6E;
 }
 
 .location-text {
   display: inline-block;
+  font-size: 24px;
+  font-family: 'Avenir', sans-serif;
+  width: 49%;
+  text-align: center;
+  color:#6E6E6E;
+  padding-bottom: 50px;
+}
+
+.learn-container {
+  height: 200px;
+}
+
+.get-button {
+  background-color: #294464;
+  color: #E5E8EC;
+  height: 69px;
+  width: 224px;
+  padding: 10px;
   font-size: 26px;
+  position: relative;
+  bottom: -16px;
+}
+
+.learn-column {
+  display: inline-block;
+  text-align: left;
+  width: 49%;
+  padding-left: 10%;
+  line-height: 55px;
+  position: relative;
+  bottom: -50px;
+}
+
+.button-column {
+  display: inline-block;
+  text-align: right;
+  width: 49%;
+  padding-right: 10%;
+}
+
+.learn-question {
+  font-size: 48px;
+  font-weight: 600;
+  color: #6E6E6E;
+}
+
+.learn-info {
+  font-family: 'Avenir', sans-serif;
+  font-size: 24px;
+  color: #6E6E6E;
+}
+
+.company-container {
+  background-color: #525351;
+  color: #FDFDFD;
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+}
+
+.info-column {
+  width: 49%;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.company-column {
+  width: 25%;
+  display: inline-block;
+  line-height: 40px;
+}
+
+.product-column {
+  width: 25%;
+  display: inline-block;
+  line-height: 40px;
+}
+
+.logo-white {
+  width: 16%;
 }
