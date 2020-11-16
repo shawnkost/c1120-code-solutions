@@ -182,6 +182,11 @@ h3 {
   line-height: 24px;
 }
 
+.info-column > p {
+  position: relative;
+  top: 30px;
+}
+
 .company-column {
   width: 25%;
   display: inline-block;
