@@ -17,5 +17,5 @@ console.log("value of unknown:", unknown);
 console.log("typeof unknown:", typeof unknown);
 
 var never;
-console.log("value of never:". never);
+console.log("value of never:", never);
 console.log("typeof never:", never);
