@@ -1,0 +1,231 @@
+.canvas-column {
+  display: inline-block;
+  width: 58%;
+  padding-left: 50px;
+}
+
+.tab-column {
+  display: inline-block;
+  width: calc(31% / 5);
+  margin-left: calc(7% / 5);
+}
+
+.nav-items {
+  color: #CBCBCB;
+  text-align: center;
+}
+
+.contact-button {
+  background-color: #294464;
+  color: #E5E8EC;
+  height: 35px;
+  padding: 10px;
+}
+
+.canvas-image {
+  padding: 25px 0 25px 160px;
+}
+
+.header-row {
+  border-bottom: 1px solid #F5F5F6;
+}
+
+.image-row {
+  padding: 25px 25px 50px 25px;
+  width: 80%;
+  margin: auto;
+  position: relative;
+
+}
+
+.woman-photo {
+  width: 100%;
+  filter: brightness(0.8);
+}
+
+.image-title {
+  position: absolute;
+  top: 21%;
+  left: 10%;
+  font-size: 48px;
+  color: #FFFFFF;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 500;
+}
+
+.image-text > p {
+  position: absolute;
+  text-align: left;
+  font-size: 24px;
+  bottom: 35%;
+  left: 10%;
+  width: 50%;
+  color: #FFFFFF;
+  font-family: 'Avenir', sans-serif;
+}
+
+.get-started-button {
+  position: absolute;
+  bottom: 24%;
+  left: 10%;
+  background-color: #294464;
+  color: #E5E8EC;
+  height: 69px;
+  width: 224px;
+  padding: 10px;
+  font-size: 26px;
+}
+
+.location-container {
+  background-color: #FAFAFA;
+}
+
+.clinician {
+  text-align: center;
+  padding: 3em;
+  margin-bottom: 3%;
+}
+
+h3 {
+  color:#6E6E6E;
+  font-size: 48px;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 300;
+  height: 40px;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-family: 'Avenir', sans-serif;
+  color:#6E6E6E;
+}
+
+.location-text {
+  display: inline-block;
+  font-size: 24px;
+  font-family: 'Avenir', sans-serif;
+  width: 49%;
+  text-align: center;
+  color:#6E6E6E;
+  padding-bottom: 50px;
+}
+
+.left-side-text {
+  position: relative;
+  left: 6%;
+}
+
+.right-side-text {
+  position: relative;
+  right: 5%;
+}
+
+.learn-container {
+  height: 200px;
+}
+
+.get-button {
+  background-color: #294464;
+  color: #E5E8EC;
+  height: 69px;
+  width: 224px;
+  padding: 10px;
+  font-size: 26px;
+  position: relative;
+  bottom: -16px;
+}
+
+.learn-column {
+  display: inline-block;
+  text-align: left;
+  width: 49%;
+  padding-left: 10%;
+  line-height: 55px;
+  position: relative;
+  bottom: -50px;
+}
+
+.button-column {
+  display: inline-block;
+  text-align: right;
+  width: 49%;
+  padding-right: 10%;
+}
+
+.learn-question {
+  font-size: 48px;
+  font-weight: 600;
+  color: #6E6E6E;
+}
+
+.learn-info {
+  font-family: 'Avenir', sans-serif;
+  font-size: 24px;
+  color: #6E6E6E;
+}
+
+.company-container {
+  background-color: #525351;
+  color: #FDFDFD;
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+  height: 400px;
+}
+
+.info-column {
+  width: 49%;
+  display: inline-block;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.info-column > p {
+  position: relative;
+  top: 30px;
+}
+
+.company-column {
+  width: 25%;
+  display: inline-block;
+  line-height: 40px;
+}
+
+.product-column {
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  top: 78px;
+  line-height: 40px;
+}
+
+.logo-white {
+  width: 16%;
+}
+
+.footer {
+  padding: 20px;
+  height: 125px;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #6E6E6E;
+  background-color: #FAFAFA;
+}
+
+.privacy-column {
+  display: inline-block;
+  POSITION: relative;
+  top: 35%;
+  LEFT: 9%;
+}
+
+.contact-column {
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  top: 35%;
+  left: 12%;
+}
