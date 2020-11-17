@@ -51,7 +51,7 @@
   text-align: right;
 }
 
-.int-text, .prac-text, .for-text {
+.int-text, .prac-text, .for-text, .data-text {
   display: inline-block;
   width: 53%;
   padding-top: 1.5rem;
@@ -75,9 +75,10 @@
   color: #6D6D6D;
 }
 
-.for-any {
+.for-any, .data {
   display: inline-block;
   width: 48%;
+  vertical-align: top;
 }
 
 .for-text > h3 {
@@ -91,4 +92,44 @@
   font-size: 16px;
   line-height: 2rem;
   color: #6D6D6D;
+}
+
+.data {
+  margin-left: 3rem;
+  width: 45%;
+}
+
+.data-image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.data-text > h3 {
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: -2%;
+}
+
+.data-text > p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 2rem;
+  color: #6D6D6D;
+}
+
+.button {
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  border: 2px solid #D86761;
+  background-color: transparent;
+  width: 17%;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #D86761;
 }
