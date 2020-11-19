@@ -13,6 +13,7 @@
   display: flex;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 1%;
 }
 
 .size {
@@ -64,4 +65,35 @@
 .item-size5 {
   margin-left: -3%;
   padding-left: 1.5%;
+}
+
+.price1 {
+  width: 65%;
+}
+
+.span1, .span2, .span3, .span4 {
+  background-color: #FFF2E7;
+}
+
+
+.thirty-five {
+  width: 23%;
+}
+
+.price-text {
+  text-align: left;
+  margin-left: 2%;
+  color: #DBDBDB;
+}
+
+.price2 {
+  width: 62%;
+}
+
+.two-hundred {
+  width: 20%;
+}
+
+.price3 {
+
 }
