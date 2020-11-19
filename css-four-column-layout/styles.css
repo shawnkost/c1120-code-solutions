@@ -1,0 +1,34 @@
+* {
+  width: 96%;
+  margin: auto;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.shuffle, .filter, .mixer, .bars {
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+
+.shuffle-img, .filter-img, .mixer-img, .bars-img {
+  width: 20%;
+}
+
+.titles {
+  font-size: 18px;
+  margin-bottom: 2%;
+}
+
+.final-text {
+  color: #929394;
+}
