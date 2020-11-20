@@ -1,5 +1,8 @@
 /* exported getValues */
-function getValue(object, key) {
-  var value = object[key];
-  return value;
+function getValues(object) {
+  var arr = [];
+  for (var keys in object) {
+    arr.push(object[keys]);
+  }
+  return arr;
 }
