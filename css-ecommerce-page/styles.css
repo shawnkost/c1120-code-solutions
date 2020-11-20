@@ -1,0 +1,120 @@
+* {
+  width: 96%;
+  margin: auto;
+  font-family: "DM Sans", sans-serif;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+}
+
+.free, .yves, .tiffany, .louis, .reformation, .price1, .price2, .price3, .price4, .price5 {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.size {
+  text-align: start;
+  border-left: 2px solid #DBDBDB;
+  color: #DBDBDB;
+}
+
+.item-name1 {
+  width: 63%;
+}
+
+.item-size1 {
+  margin-left: -4%;
+  padding-left: 1.5%;
+}
+
+.item-name2 {
+  margin-left: 3%;
+  padding-right: 1%;
+}
+
+.item-size2 {
+  padding-left: 1.5%;
+}
+
+.item-name3 {
+  width: 29%;
+}
+
+.item-size3 {
+  margin-left: -1%;
+  padding-left: 1.5%;
+}
+
+.item-name4 {
+  width: 66%;
+}
+
+.item-size4 {
+  margin-left: -2%;
+  padding-left: 1.5%;
+}
+
+.item-name5 {
+  width: 68%;
+}
+
+.item-size5 {
+  margin-left: -3%;
+  padding-left: 1.5%;
+}
+
+.price1 {
+  width: 65%;
+}
+
+.span1, .span2, .span3, .span4, .span5 {
+  background-color: #FFF2E7;
+}
+
+
+.thirty-five {
+  width: 34%;
+}
+
+.price-text {
+  text-align: left;
+  margin-left: 2%;
+  color: #DBDBDB;
+}
+
+.two-hundred {
+  padding-left: 8%;
+}
+
+.sixteen {
+  margin-left: -17%;
+}
+
+.two-thousand {
+  margin-left: -21%;
+}
+
+.four-hundred {
+  margin-right: 2%;
+  width: 86%;
+}
+
+.ninety-five {
+  width: 59%;
+}
+
+.twelve-hundred {
+  margin-left: -13%;
+}
+
+.twenty {
+  width: 40%;
+}
+
+.one-ninety-eight {
+  margin-left: -8%;
+}
