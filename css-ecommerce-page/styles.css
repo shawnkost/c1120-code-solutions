@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.free, .yves, .tiffany, .louis, .reformation, .price1, .price2, .price3, .price4 {
+.free, .yves, .tiffany, .louis, .reformation, .price1, .price2, .price3, .price4, .price5 {
   display: flex;
   font-size: 18px;
   font-weight: 600;
@@ -71,13 +71,13 @@
   width: 65%;
 }
 
-.span1, .span2, .span3, .span4 {
+.span1, .span2, .span3, .span4, .span5 {
   background-color: #FFF2E7;
 }
 
 
 .thirty-five {
-  width: 23%;
+  width: 34%;
 }
 
 .price-text {
@@ -86,22 +86,35 @@
   color: #DBDBDB;
 }
 
-.price2 {
-  width: 62%;
-}
-
 .two-hundred {
-  width: 20%;
+  padding-left: 8%;
 }
 
-.price3 {
+.sixteen {
+  margin-left: -17%;
+}
 
+.two-thousand {
+  margin-left: -21%;
 }
 
 .four-hundred {
-
+  margin-right: 2%;
+  width: 86%;
 }
 
 .ninety-five {
+  width: 59%;
+}
 
+.twelve-hundred {
+  margin-left: -13%;
+}
+
+.twenty {
+  width: 40%;
+}
+
+.one-ninety-eight {
+  margin-left: -8%;
 }
