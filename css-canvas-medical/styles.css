@@ -15,6 +15,25 @@
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: #CBCBCB;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1A648E;
+  font-weight: 700;
+}
+
 .contact-button {
   background-color: #294464;
   color: #E5E8EC;
@@ -86,7 +105,7 @@
   margin-bottom: 3%;
 }
 
-h3 {
+.clinician > h3 {
   color:#6E6E6E;
   font-size: 48px;
   font-family: 'Tiempos Headline', serif;
@@ -228,4 +247,80 @@ h3 {
   position: relative;
   top: 35%;
   left: 12%;
+}
+
+.product-tag {
+  color: #1A648E;
+}
+
+.man-smiling {
+  filter: brightness(0.8);
+}
+
+.product-image-title {
+  position: absolute;
+  top: 29%;
+  left: 8%;
+  font-size: 55px;
+}
+
+.canvas-text {
+  position: absolute;
+  bottom: 37%;
+  left: 8%;
+  width: 53%;
+  font-size: 25px;
+  font-family: 'Avenir', sans-serif;
+  color: #FFFFFF;
+}
+
+.command-container {
+  background-color: #FAFAFA;
+  padding-left: 11%;
+  padding-bottom: 3%;
+}
+
+.command-image {
+  display: inline-block;
+  width: 49%;
+  margin-top: 2%;
+}
+
+.command-image-text {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  margin-top: 2%;
+}
+
+.command-image-text > h3 {
+  color:#6E6E6E;
+  font-size: 48px;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.command-image-text > p:not(.quote) {
+  color:#6E6E6E;
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+  padding-right: 34%;
+}
+
+.learn-more {
+  color: #787DA7;
+  font-family: 'Avenir';
+  font-size: 20px;
+}
+
+.quote {
+  color:#6E6E6E;
+  font-style: italic;
+  font-size: 20px;
+  padding-right: 34%;
+}
+
+.dr {
+
 }
