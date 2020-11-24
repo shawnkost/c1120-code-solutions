@@ -1,0 +1,31 @@
+.body-off {
+  background-color: black;
+}
+
+.body-on {
+  background-color: #FEF9F1;
+}
+
+.off {
+  height: 300px;
+  width: 300px;
+  background-color: #252525;
+  border-radius: 50%;
+  box-shadow: black;
+  display: inline-block;
+  position: relative;
+  top: 30vh;
+  left: 43%;
+}
+
+.on {
+  height: 300px;
+  width: 300px;
+  background-color: #FAEA84;
+  border-radius: 50%;
+  box-shadow: black;
+  display: inline-block;
+  position: relative;
+  top: 30vh;
+  left: 43%;
+}
