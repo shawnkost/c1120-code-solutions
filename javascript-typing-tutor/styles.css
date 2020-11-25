@@ -22,3 +22,17 @@ span {
 .active {
   border-bottom: solid 4px black;
 }
+
+.hide {
+  visibility: hidden;
+  position: fixed;
+  bottom: 32%;
+  right: 46%;
+}
+
+.show {
+  visibility: visible;
+  position: fixed;
+  bottom: 32%;
+  right: 46%;
+}
