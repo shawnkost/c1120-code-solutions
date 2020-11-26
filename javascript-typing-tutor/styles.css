@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  top: 22rem;
+  font-size: 38px;
+}
+
+span {
+  padding-bottom: 15px;
+}
+
+.green {
+  color: #1ACD1D;
+}
+
+.red {
+  color: #F80807;
+}
+
+.active {
+  border-bottom: solid 4px black;
+}
+
+.hide {
+  visibility: hidden;
+  position: fixed;
+  bottom: 32%;
+  right: 46%;
+}
+
+.show {
+  visibility: visible;
+  position: fixed;
+  bottom: 32%;
+  right: 46%;
+}
