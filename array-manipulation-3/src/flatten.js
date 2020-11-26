@@ -1,12 +1,9 @@
 /* exported flatten */
 
-//define function
 function flatten(array) {
-
-  //create new array
   var arr = [];
 
-  //loop over the array
+  //loop over the array length
   for (var i = 0; i < array.length; i++) {
 
     //check if input is an array
