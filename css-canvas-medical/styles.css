@@ -321,6 +321,17 @@ a:hover {
   padding-right: 34%;
 }
 
-.dr {
+.population-container {
+  display: inline-block;
+}
 
+
+.population-text {
+  display: inline-block;
+  width: 49%;
+}
+
+.population-image {
+  position: relative;
+  left: 60%;
 }
