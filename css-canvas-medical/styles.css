@@ -274,28 +274,28 @@ a:hover {
   color: #FFFFFF;
 }
 
-.command-container {
+.command-container, .performance-container {
   background-color: #FAFAFA;
   padding-left: 11%;
   padding-bottom: 3%;
 }
 
-.command-image {
+.command-image, .performance-image {
   display: inline-block;
   width: 49%;
   margin-top: 2%;
 }
 
-.command-image-text {
+.command-image-text, .performance-text {
   display: inline-block;
-  width: 49%;
+  width: 47%;
   vertical-align: top;
   margin-top: 2%;
 }
 
 .command-image-text > h3 {
   color:#6E6E6E;
-  font-size: 48px;
+  font-size: 36px;
   font-family: 'Tiempos Headline', serif;
   font-weight: 300;
   margin-bottom: 0;
@@ -321,17 +321,69 @@ a:hover {
   padding-right: 34%;
 }
 
+.dr {
+  color: #6E6E6E;
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+}
+
 .population-container {
   display: inline-block;
+  height: 700px;
 }
 
 
 .population-text {
+  padding-left: 10.7%;
+  vertical-align: top;
   display: inline-block;
-  width: 49%;
+  width: 38%;
+  padding-top: 2%;
 }
 
 .population-image {
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
   position: relative;
-  left: 60%;
+  top: 50px;
+  width: 49%;
+}
+
+.population-text > h3 {
+  color: #6E6E6E;
+  font-size: 36px;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 300;
+}
+
+.p1 {
+  color: #6E6E6E;
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+}
+
+.quote2 {
+  color: #6E6E6E;
+  font-style: italic;
+  font-size: 19px;
+}
+
+.performance-text > h3 {
+  color: #6E6E6E;
+  font-size: 36px;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.performance-text > p:not(.quote) {
+  color: #6E6E6E;
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+  padding-right: 34%;
+}
+
+.performance-image {
+  margin-top: 7%;
 }
