@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 50px;
+}
+
+.left-arrow {
+  padding-left: 3%;
+}
+
+.right-arrow {
+  padding-right: 3%;
+}
+
+.circle-row {
+  justify-content: center;
+  font-size: 50px;
+  padding: 2%;
+}
+
+.fa-circle:not(:last-child) {
+  padding-right: 2%;
+}
