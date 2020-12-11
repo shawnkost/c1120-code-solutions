@@ -10,8 +10,6 @@ var $circle4 = document.querySelector(".circle4");
 var i = 0;
 var images = [];
 var timeOutVar = null;
-var clearInter1 = null;
-var clearInter2 = null;
 var firstTime = true;
 
 images[0] = "images/1.png";
