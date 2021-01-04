@@ -16,13 +16,13 @@ if (process.argv[3] === "minus") {
 }
 
 if (process.argv[3] === "times") {
-  const num = parseInt(process.argv[2]);
-  const num2 = parseInt(process.argv[4]);
+  let num = parseInt(process.argv[2]);
+  let num2 = parseInt(process.argv[4]);
   multiply(num, num2);
 }
 
 if (process.argv[3] === "over") {
-  const num = parseInt(process.argv[2]);
-  const num2 = parseInt(process.argv[4]);
+  let num = parseInt(process.argv[2]);
+  let num2 = parseInt(process.argv[4]);
   divide(num, num2);
 }
