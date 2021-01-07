@@ -7,6 +7,8 @@ const grades = {};
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/api/grades', (req, res) => {
   const arr = [];
   for (let index in grades) {
@@ -15,13 +17,10 @@ app.get('/api/grades', (req, res) => {
   res.json(arr);
 })
 
-app.use(express.json());
-
 app.post('/api/grades', (req, res) => {
   grades[nextID] = req.body;
   grades[nextID].id = nextID;
-  res.json(grades[nextID]);
-  res.status(201).end();
+  res.status(201).json(grades[nextID])
   nextID = nextID + 1;
 })
 
