@@ -1,0 +1,35 @@
+.header {
+  height: 80px;
+}
+
+.border-bottom {
+  border-bottom: 2px solid grey;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.sign-up {
+  border: 1px solid rgb(0, 123, 255);
+  color: rgb(0, 123, 255);
+  background-color: white;
+}
+
+.pricing-row {
+  max-width: 700px;
+}
+
+.card {
+  min-width: 220px;
+}
+
+ul {
+  list-style: none;
+}
+
+.card-button {
+  border: none;
+  background-color: #007BFF;
+  color: white;
+}
