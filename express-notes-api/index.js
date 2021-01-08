@@ -21,37 +21,36 @@ app.get("/api/notes/:id", (req, res) => {
       error: "ID given was not a positive integer"
     });
   }
-  for (const index in JSONData.notes) {
-    if (ID === Number(index)) {
-      return res.json(JSONData.notes[index]);
-    }
+  if (JSONData.notes[ID]) {
+    return res.json(JSONData.notes[ID]);
+  } else {
+    res.status(404).json({
+      error: "ID does not exist"
+    });
   }
-  res.status(404).json({
-    error: "ID does not exist"
-  });
 })
 
 app.post("/api/notes", (req, res) => {
   const content = req.body;
   const newID = JSONData.nextId++;
-  if (Object.entries(content).length === 0) {
+  if (content.content) {
+    JSONData.notes[newID] = content;
+    JSONData.notes[newID].id = newID;
+  } else {
     return res.status(400).json({
       error: "content is a required field"
     });
-  } else {
-    JSONData.notes[newID] = content;
-    JSONData.notes[newID].id = newID;
-    let newEntry = JSONData;
-    newEntry = JSON.stringify(newEntry, null, 2);
-    fs.writeFile("./data.json", newEntry, "utf8", err => {
-      if (err) {
-        return res.status(500).json({
-          error: "An unexpected error occurred."
-        });
-      }
-      res.status(201).json(JSONData.notes[newID]);
-    });
   }
+  let newEntry = JSONData;
+  newEntry = JSON.stringify(newEntry, null, 2);
+  fs.writeFile("./data.json", newEntry, "utf8", err => {
+    if (err) {
+      return res.status(500).json({
+        error: "An unexpected error occurred."
+      });
+    }
+    res.status(201).json(JSONData.notes[newID]);
+  });
 })
 
 app.delete("/api/notes/:id", (req, res) => {
@@ -61,16 +60,12 @@ app.delete("/api/notes/:id", (req, res) => {
       error: "ID given was not a positive integer"
     });
   }
-  if (!JSONData.notes.hasOwnProperty(ID)) {
+  if (!JSONData.notes[ID]) {
     return res.status(404).json({
       error: `cannot find note with id ${ID}`
     });
   }
-  for (const index in JSONData.notes) {
-    if (ID === Number(index)) {
-      delete JSONData.notes[ID];
-    }
-  }
+  delete JSONData.notes[ID];
   let newData = JSONData;
   newData = JSON.stringify(newData, null, 2);
   fs.writeFile("./data.json", newData, "utf8", err => {
@@ -91,19 +86,19 @@ app.put("/api/notes/:id", (req, res) => {
       error: "ID given was not a positive integer"
     });
   }
-  if (Object.entries(content).length === 0) {
-    return res.status(400).json({
-      error: "content is a required field"
-    });
-  }
-  if (!JSONData.notes.hasOwnProperty(ID)) {
+  if (!JSONData.notes[ID]) {
     return res.status(404).json({
       error: `cannot find note with id ${ID}`
     });
   }
-
-  JSONData.notes[req.params.id] = content;
-  JSONData.notes[req.params.id].id = req.params.id
+  if (content.content) {
+    JSONData.notes[req.params.id] = content;
+    JSONData.notes[req.params.id].id = req.params.id
+  } else {
+    return res.status(400).json({
+      error: "content is a required field"
+    });
+  }
   let newData = JSONData;
   newData = JSON.stringify(newData, null, 2);
   fs.writeFile("./data.json", newData, "utf8", err => {
