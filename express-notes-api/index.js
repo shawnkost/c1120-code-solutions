@@ -41,8 +41,7 @@ app.post("/api/notes", (req, res) => {
       error: "content is a required field"
     });
   }
-  let newEntry = JSONData;
-  newEntry = JSON.stringify(newEntry, null, 2);
+  let newEntry = JSON.stringify(JSONData, null, 2);
   fs.writeFile("./data.json", newEntry, "utf8", err => {
     if (err) {
       return res.status(500).json({
@@ -66,8 +65,7 @@ app.delete("/api/notes/:id", (req, res) => {
     });
   }
   delete JSONData.notes[ID];
-  let newData = JSONData;
-  newData = JSON.stringify(newData, null, 2);
+  let newData = JSON.stringify(JSONData, null, 2);
   fs.writeFile("./data.json", newData, "utf8", err => {
     if (err) {
       return res.status(500).json({
@@ -99,8 +97,7 @@ app.put("/api/notes/:id", (req, res) => {
       error: "content is a required field"
     });
   }
-  let newData = JSONData;
-  newData = JSON.stringify(newData, null, 2);
+  let newData = JSON.stringify(JSONData, null, 2);
   fs.writeFile("./data.json", newData, "utf8", err => {
     if (err) {
       return res.status(500).json({
