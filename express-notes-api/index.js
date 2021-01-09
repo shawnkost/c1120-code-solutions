@@ -1,9 +1,10 @@
 const express = require("express");
 const JSONData = require("./data.json");
 const fs = require("fs");
+const cors = require("cors");
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/notes", (req, res) => {
