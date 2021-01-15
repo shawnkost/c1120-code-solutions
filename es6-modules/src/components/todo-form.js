@@ -43,5 +43,3 @@ export default class TodoForm {
     return this.element;
   }
 }
-
-// module.exports = TodoForm;

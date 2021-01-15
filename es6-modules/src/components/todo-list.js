@@ -48,5 +48,3 @@ export default class TodoList {
     return todoList;
   }
 }
-
-// module.exports = TodoList;
