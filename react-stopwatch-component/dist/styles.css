@@ -1,0 +1,26 @@
+.time-div {
+  display: flex;
+  margin-bottom: 2%;
+  border: 2px solid black;
+  border-radius: 80px;
+  font-size: 24px;
+  width: 165px;
+  height: 165px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+  font-size: 28px;
+  margin-left: 8%;
+}
+
+.margin-left {
+  margin-left: 50%;
+}
+
+.fa-pause {
+  margin-left: 7.8%;
+}
