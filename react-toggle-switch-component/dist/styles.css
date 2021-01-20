@@ -1,0 +1,40 @@
+.toggle-container {
+  position: relative;
+  display: inline-block;
+}
+
+.switch-on {
+  height: 20px;
+  width: 45px;
+  border-radius: 22px;
+  background-color: green;
+  display: inline-block;
+}
+
+.switch-off {
+  height: 20px;
+  width: 45px;
+  border-radius: 22px;
+  background-color: gray;
+  display: inline-block;
+}
+
+.circle-div-on {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.circle-div-off {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
