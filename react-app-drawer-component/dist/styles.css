@@ -1,0 +1,44 @@
+body {
+  margin: auto;
+}
+
+.style-on {
+  display: inline-block;
+  width: 40%;
+  background-color: white;
+  height: 100vh;
+}
+
+.style-off {
+  display: none;
+}
+
+.container {
+  background-color: white;
+  height: 100vh;
+}
+
+.gray {
+  background-color: #333333;
+  cursor: pointer;
+}
+
+i {
+  margin-left: 0.5%;
+  margin-top: 1%;
+  font-size: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.i-hide {
+  display: none;
+}
+
+.link {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+  font-size: 24px;
+}
