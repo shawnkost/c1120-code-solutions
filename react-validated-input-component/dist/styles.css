@@ -1,0 +1,19 @@
+label {
+  display: block;
+}
+
+input {
+  margin-right: 10px;
+}
+
+i {
+  font-size: 18px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
