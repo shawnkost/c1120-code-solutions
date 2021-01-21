@@ -20,6 +20,7 @@ body {
 
 .gray {
   background-color: #333333;
+  cursor: pointer;
 }
 
 i {
@@ -27,8 +28,17 @@ i {
   margin-top: 1%;
   font-size: 24px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .i-hide {
   display: none;
+}
+
+.link {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+  font-size: 24px;
 }
