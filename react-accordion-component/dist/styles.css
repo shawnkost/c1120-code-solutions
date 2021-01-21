@@ -1,0 +1,15 @@
+.hide {
+  display: none;
+}
+
+.topics {
+  /* margin-bottom: .5%; */
+  background-color: lightgray;
+  border: 2px solid black;
+  width: 215px;
+}
+
+.show {
+  border: 2px solid black;
+  width: 215px;
+}
