@@ -1,3 +1,7 @@
+* {
+  outline: none !important;
+}
+
 .hide {
   display: none;
 }
@@ -8,10 +12,28 @@
 
 i {
   font-size: 32px;
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  margin-left: 1.5%;
+}
+
+.fa-arrow-right {
+  margin-right: 1.5%;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle {
+  margin-right: 2%;
 }
