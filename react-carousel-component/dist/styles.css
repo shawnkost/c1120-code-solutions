@@ -1,0 +1,17 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+i {
+  font-size: 32px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
