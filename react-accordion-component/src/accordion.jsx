@@ -3,39 +3,56 @@ import React from "react";
 export default class Accordion extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { accordionOpen: false };
-    this.test = this.test.bind(this);
+    this.state = {
+      accordionOpen: false,
+      openId: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
-  test(event) {
-    if (this.state.accordionOpen === false) {
-      this.setState({ accordionOpen: true} );
-      return event.target.nextSibling.className = "show";
-    } else if (event.target.nextSibling.className === "show") {
-      this.setState({ accordionOpen: false });
-      const details = document.querySelector(".show");
-      details.className = "hide";
+  handleClick(id) {
+    if (
+      this.state.accordionOpen === false ||
+      (this.state.accordionOpen === true &&
+        id !== 0 &&
+        id !== this.state.openId)
+    ) {
+      this.setState({
+        accordionOpen: true,
+        openId: id,
+      });
     } else {
-      this.setState({ accordionOpen: true });
-      const details = document.querySelector(".show");
-      details.className = "hide";
-      return (event.target.nextSibling.className = "show");
+      this.setState({
+        accordionOpen: false,
+        openId: 0,
+      });
     }
   }
   render() {
     return (
       <div className="container">
-        <Topics topics={this.props.topics} test={this.test} />
+        <Topics
+          topics={this.props.topics}
+          handleClick={this.handleClick}
+          openId={this.state.openId}
+        />
       </div>
     );
   }
 }
 
 function TopicDetails(props) {
-  return <div className="hide">{props.value.details}</div>
+  if (props.openId === props.value.id) {
+    return <div className="show">{props.value.details}</div>;
+  }
+  return <div className="hide">{props.value.details}</div>;
 }
 
 function TopicName(props) {
-  return <div className="topics" onClick={props.test}>{props.value.name}</div>
+  return (
+    <div className="topics" onClick={props.handleClick}>
+      {props.value.name}
+    </div>
+  );
 }
 
 function Topics(props) {
@@ -43,8 +60,12 @@ function Topics(props) {
   const newTopics = topics.map((topic) => {
     return (
       <div>
-        <TopicName key={topic.name} value={topic} test={props.test} />
-        <TopicDetails value={topic} />
+        <TopicName
+          key={topic.id}
+          value={topic}
+          handleClick={() => props.handleClick(topic.id)}
+        />
+        <TopicDetails value={topic} openId={props.openId} />
       </div>
     );
   });

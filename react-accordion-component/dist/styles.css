@@ -6,6 +6,7 @@
   background-color: lightgray;
   border: 2px solid black;
   width: 215px;
+  cursor: pointer;
 }
 
 .show {
