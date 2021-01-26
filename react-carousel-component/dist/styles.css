@@ -15,11 +15,11 @@ i {
   cursor: pointer;
 }
 
-.fa-arrow-left {
+.arrow-left {
   margin-left: 1.5%;
 }
 
-.fa-arrow-right {
+.arrow-right {
   margin-right: 1.5%;
 }
 
@@ -34,6 +34,6 @@ i {
   justify-content: center;
 }
 
-.fa-circle {
+.circle {
   margin-right: 2%;
 }
