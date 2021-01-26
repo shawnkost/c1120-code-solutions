@@ -3,35 +3,38 @@ import React from "react";
 export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentPhotoId: 1 };
+    this.state = { currentPhotoIndex: 0 };
     this.timeoutId = null;
     this.previousPhoto = this.previousPhoto.bind(this);
     this.nextPhoto = this.nextPhoto.bind(this);
-    this.timeOut = this.timeOut.bind(this);
     this.specificPhoto = this.specificPhoto.bind(this);
     this.timeOut();
   }
   previousPhoto() {
-    if (this.state.currentPhotoId === 1) {
-      this.setState({ currentPhotoId: 5 });
+    const currentPhotoIndex = this.state.currentPhotoIndex;
+    const imagesArray = this.props.images;
+    if (currentPhotoIndex === 0) {
+      this.setState({ currentPhotoIndex: imagesArray.length - 1 });
     } else {
-      this.setState({ currentPhotoId: this.state.currentPhotoId - 1 });
+      this.setState({ currentPhotoIndex: currentPhotoIndex - 1 });
     }
     clearTimeout(this.timeoutId);
     this.timeOut();
   }
   nextPhoto() {
-    if (this.state.currentPhotoId === 5) {
-      this.setState({ currentPhotoId: 1 });
+    const currentPhotoIndex = this.state.currentPhotoIndex;
+    const imagesArray = this.props.images;
+    if (currentPhotoIndex === imagesArray.length - 1) {
+      this.setState({ currentPhotoIndex: 0 });
     } else {
-      this.setState({ currentPhotoId: this.state.currentPhotoId + 1 });
+      this.setState({ currentPhotoIndex: currentPhotoIndex + 1 });
     }
     clearTimeout(this.timeoutId);
     this.timeOut();
   }
-  specificPhoto(id) {
+  specificPhoto(index) {
     clearTimeout(this.timeoutId);
-    this.setState({ currentPhotoId: id });
+    this.setState({ currentPhotoIndex: index });
     this.timeOut();
   }
   timeOut() {
@@ -48,7 +51,7 @@ export default class Carousel extends React.Component {
           ></i>
           <Images
             images={this.props.images}
-            currentPhotoId={this.state.currentPhotoId}
+            currentPhotoIndex={this.state.currentPhotoIndex}
           />
           <i
             className="fas fa-arrow-right arrow-right"
@@ -58,7 +61,7 @@ export default class Carousel extends React.Component {
         <div className="circles">
           <Circles
             images={this.props.images}
-            currentPhotoId={this.state.currentPhotoId}
+            currentPhotoIndex={this.state.currentPhotoIndex}
             specificPhoto={this.specificPhoto}
           />
         </div>
@@ -70,7 +73,7 @@ export default class Carousel extends React.Component {
 const CurrentImage = (props) => {
   return (
     <img
-      className={props.currentPhotoId === props.value.id ? "show" : "hide"}
+      className={props.currentPhotoIndex === props.index ? "show" : "hide"}
       src={props.value.src}
     ></img>
   );
@@ -78,12 +81,13 @@ const CurrentImage = (props) => {
 
 const Images = (props) => {
   const images = props.images;
-  const newImages = images.map((image) => {
+  const newImages = images.map((image, index) => {
     return (
       <CurrentImage
         key={image.id}
         value={image}
-        currentPhotoId={props.currentPhotoId}
+        currentPhotoIndex={props.currentPhotoIndex}
+        index={index}
       />
     );
   });
@@ -94,7 +98,7 @@ const CurrentCircle = (props) => {
   return (
     <i
       className={
-        props.currentPhotoId === props.value.id
+        props.currentPhotoIndex === props.index
           ? "fas fa-circle circle"
           : "far fa-circle circle"
       }
@@ -105,13 +109,14 @@ const CurrentCircle = (props) => {
 
 const Circles = (props) => {
   const images = props.images;
-  const newImages = images.map((image) => {
+  const newImages = images.map((image, index) => {
     return (
       <CurrentCircle
         key={image.id}
         value={image}
-        currentPhotoId={props.currentPhotoId}
-        specificPhoto={() => props.specificPhoto(image.id)}
+        currentPhotoIndex={props.currentPhotoIndex}
+        specificPhoto={() => props.specificPhoto(index)}
+        index={index}
       />
     );
   });
