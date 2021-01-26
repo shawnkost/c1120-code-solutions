@@ -10,22 +10,4 @@ const images = [
   { id: 5, name: "Jigglypuff", src: "../images/5.png" },
 ];
 
-const circles = [
-  {
-    id: 1,
-  },
-  {
-    id: 2,
-  },
-  {
-    id: 3,
-  },
-  {
-    id: 4,
-  },
-  {
-    id: 5,
-  }
-];
-
-ReactDOM.render(<Carousel images={images} circles={circles} />, document.querySelector("#root"));
+ReactDOM.render(<Carousel images={images} />, document.querySelector("#root"));
