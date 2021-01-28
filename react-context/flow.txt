@@ -1,0 +1,40 @@
+1) User can sign up
+
+When a user clicks on the Register now tag on our home page, the componentDidMount method of the App Component in our app.jsx file calls our parseRoute function from our parse-route.js
+file to create our new route, and then replaces the old route in state. Since our route in state has changed, our App component renders, and the renderPage method of the App
+component is called. The path is now set to "sign-up", so the Auth component is called. We pass the path from the Auth Component to the AuthForm component being called. Due to some
+conditionals in AuthForm, some text on the screen is changed to indicate we are signing up instead of singing in. We store the information the user inputs in the sign up fields
+in our AuthForm state. When the user clicks Register, the handleSubmit() method makes a POST fetch request to the specified endpoint sending the info that the user inputted. When our
+server receives the fetch request, we make sure all the required data was sent, otherwise we send the client an error message. If all the data expected was sent, we hash the password
+using argon2 then we query the database to insert the new username and hashedPassword into our users table. If the query was successful, we respond with a 201 status including an array
+of a JSON object containing info about the user.
+
+2) User can sign in
+
+After a user has registered an account, they are taken back to the sign in page. The componentDidMount method of the App Component in our app.jsx file calls our parseRoute function from
+our parse-route.js file to create our new route, and then replaces the old route in state. Since our route in state has changed, our App component renders, and the renderPage method of
+the App component is called. The path is now set to "sign-in", so the Auth component is called. On our auth.jsx file we are importing AppContext so we have access to the .context property.
+In render we create a jsx element for the AuthForm component and pass the route.path in attributes along with the handleSignIn function from app.jsx on the onSignIn attribute. The username
+and password in state in auth-form.jsx is being updated as the user types, and when a user attempts to login, the handleSubmit() method of the AuthForm component is called and the user
+attempts to make a POST fetch request to our server. The server checks to make sure both a username and password were supplied or else an error occurs, and then there's a query to
+the database to grab the userId and hashedPassword for the submitted username. If the username exists in the database, the server utilizes argon2 to verify whether or not the user-inputted
+password matches the hashedPassword in the database. If the passwords match, a jsonwebtoken is created and sent to the handleSignIn() method of the App component in app.jsx. We assign
+the users token to a property on localstorage and update the user property in state with payload about user. After the component renders, componentDidMount is called and grabs the token
+from localstorage. After the token is decoded, state is updated with new user payload and is no longer being authorized. renderPage method is called() and creates a jsx element for
+the Home component. The user is taken to a page where they see a gif of Rick Astley.
+
+3) User can stay signed in
+
+To be honest, I'm not quite sure everything that is happening, but I think when a user refreshes the webpage, since their info has been saved to localstorage, we grab the username and
+token from localstorage and pass it to the componentDidMount() method on the App component, which updates state accordingly. Since the state now has information about the user,
+the Home component conditional which usually would return the Redirect component is skipped, and the usual home page is created and rendered.
+
+4) User can sign out
+
+When a user clicks the sign out button in the navbar, the onClick event that is assigned on navbar.jsx is fired and runs the handleSignOut() function from app.jsx. The users info is
+then removed from localstorage, and the user property in state is then set to null. Since the state has been updated, the component gets rerendered and the method renderPage() is called
+and returns a jsx element for the Home component. The Home component has access to state from the .context property, so since there is no user anymore, we get redirected to a jsx element
+for the Redirect component being passed the route "sign-in". Inside of redirect.jsx, a new url is created and assigned to the window. Since componentDidMount() of app.jsx has an event
+listener for "hashchanges", the callback function is executed calling the parseRoute function with the newly created route and assigning that value to state. The render page method
+is now called, and due to conditionals it takes us to a jsx element for the Auth component. The Auth component has access to values from state because of the .context property so it
+checks the route, and since the route has been changed to sign-in, the usually auth page is created.
