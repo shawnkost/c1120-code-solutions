@@ -73,13 +73,8 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
     let todos = this.state.todos;
-    function test(todoId) {
-      return todoId === todo.todoId
-    }
-    const index = todos.findIndex(test);
-    console.log(index);
+    const index = todos.findIndex((todo) => todoId === todo.todoId);
     const completed = todos[index].isCompleted;
-    console.log("completed status", completed);
     const oppositeCompletedStatus = { isCompleted: !completed };
     fetch(`/api/todos/${todoId}`, {
       method: "PATCH",
@@ -89,13 +84,18 @@ export default class App extends React.Component {
       body: JSON.stringify(oppositeCompletedStatus),
     })
       .then((response) => response.json())
-      .then(
-        (data) => (todos[index] = data),
-        console.log("todos", todos),
+      .then((data) => {
+        const newTodos = todos.map((todo) => {
+          if (data.todoId === todo.todoId) {
+            todos.splice(index, 1, data);
+            return data;
+          }
+          return todo;
+        });
         this.setState({
-          todos,
-        })
-      );
+          todos: newTodos,
+        });
+      });
   }
 
   render() {
